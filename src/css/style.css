@@ -1,0 +1,80 @@
+body {
+    background-color: #E5E5E5;
+    font-family: 'Roboto', serif;
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 655px;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px 0 rgba(0, 0, 0, 0.3);
+    padding: 30px 30px 30px 0;
+}
+
+.card .main-img {
+    width: 278px;
+    height: 293px;
+    position: relative;
+    left: -10%;
+}
+
+.card .faq {
+    margin-left: -30px;
+}
+
+.faq h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.q-and-a {
+    width: 380px;
+}
+.q-and-a li {
+    padding-top: 15px;
+}
+.q-and-a li:not(:last-child) {
+    border-bottom: 1px solid #a5a5a541;
+    padding-bottom: 20px;
+}
+
+.clickable {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+.question {
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.question:hover {
+    color: #F47C57;
+}
+.arrow {
+    width: 15px;
+    height: 8.863636016845703px;
+    cursor: pointer;
+}
+.arrow:not(.on) {
+    display: none;
+}
+
+.answer {
+    padding-top: 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+.answer:not(.active) {
+    display: none;
+}
