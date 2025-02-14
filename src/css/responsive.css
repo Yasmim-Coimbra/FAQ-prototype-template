@@ -1,0 +1,50 @@
+@media (max-width: 800px) {
+    .card {
+        width: 500px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .card .main-img {
+        left: 0;
+        transform: translate(0, 50%);
+    }
+
+    .card .faq {
+        margin-left: 0;
+        transform: translate(0, 25%);
+    }
+
+    .card .faq h1 {
+        text-align: center;
+    }
+
+    .q-and-a li {
+        padding-top: 30px;
+    }
+    .q-and-a li:not(:last-child) {
+        padding-bottom: 30px;
+    }
+}
+
+@media (max-width: 520px) {
+    .card {
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 430px) {
+    .card {
+        max-width: 400px;
+    }
+    .q-and-a {
+        max-width: 280px;
+    }
+}
+
+@media (max-width: 320px) {
+    main {
+        margin-top: 10px;
+    }
+}
