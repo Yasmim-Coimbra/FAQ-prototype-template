@@ -36,45 +36,45 @@ main {
     margin-bottom: 15px;
 }
 
-.q-and-a {
+.itens {
     width: 380px;
 }
-.q-and-a li {
+
+.item {
+    cursor: pointer;
+    background: url('../images/disabled-arrow.png') no-repeat top 23px right 0/12px;
     padding-top: 15px;
-}
-.q-and-a li:not(:last-child) {
-    border-bottom: 1px solid #a5a5a541;
-    padding-bottom: 20px;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid #a5a5a541;
+        padding-bottom: 20px;
+    }
+
+    &.active {
+        background-image: url('../images/active-arrow.png');
+    }
 }
 
-.clickable {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    user-select: none;
-}
 .question {
     font-size: 17px;
     font-weight: 500;
-    cursor: pointer;
-}
-.question:hover {
-    color: #F47C57;
-}
-.arrow {
-    width: 15px;
-    height: 8.863636016845703px;
-    cursor: pointer;
-}
-.arrow:not(.on) {
-    display: none;
+    transition: 0.2s ease;
+    width: 90%;
+    overflow: auto;
+
+    &:hover {
+        color: #F47C57;
+    }
 }
 
 .answer {
-    padding-top: 10px;
+    display: none;
+    width: 90%;
+}
+
+.item.active .answer {
+    display: block;
+    padding-top: 12px;
     font-size: 15px;
     font-weight: 300;
-}
-.answer:not(.active) {
-    display: none;
 }

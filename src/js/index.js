@@ -1,28 +1,13 @@
-const questions = document.querySelectorAll(".clickable");
-const answers = document.querySelectorAll(".answer");
-const grayArrow = document.querySelectorAll(".gray");
-const redArrow = document.querySelectorAll(".red");
+const questionsAndAnswers = document.querySelectorAll('.item');
 
-questions.forEach((question, indexPergunta) => {
-    question.addEventListener("click", () => {
+questionsAndAnswers.forEach(item => {
+    item.addEventListener('click', () => {
+        const activeItem = document.querySelector('.active');
+        
+        item.classList.toggle('active');
 
-        turnOnOff(indexPergunta);
-        closeOtherAnswers();
-
-        function closeOtherAnswers() {
-            answers.forEach((answer, indexResposta) => {
-                if (indexResposta !== indexPergunta) {
-                    answer.classList.remove("active");
-                    grayArrow[indexResposta].classList.add("on");
-                    redArrow[indexResposta].classList.remove("on");
-                }
-            });
+        if (activeItem) {
+            activeItem.classList.remove('active');
         }
     })
 })
-
-function turnOnOff(indexPergunta) {
-    answers[indexPergunta].classList.toggle("active");
-    grayArrow[indexPergunta].classList.toggle("on");
-    redArrow[indexPergunta].classList.toggle("on");
-}
