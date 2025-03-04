@@ -1,6 +1,6 @@
 const questionsAndAnswers = document.querySelectorAll('.item');
 
-questionsAndAnswers.forEach(item => {
+for (const item of questionsAndAnswers) {
     item.addEventListener('click', () => {
         const activeItem = document.querySelector('.active');
         
@@ -9,5 +9,5 @@ questionsAndAnswers.forEach(item => {
         if (activeItem) {
             activeItem.classList.remove('active');
         }
-    })
-})
+    });
+}
